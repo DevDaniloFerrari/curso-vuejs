@@ -1,0 +1,51 @@
+.painel {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  border: 1px solid #888888;
+  box-shadow: 1px 1px #888888;
+  padding: 5px;
+  margin-bottom: 5px;
+  margin: 5px;
+}
+
+.jogadores {
+  display: flex;
+  justify-content: space-around;
+}
+
+.barra {
+  height: 10px;
+  width: 100px;
+  background: green;
+}
+
+.jogador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+}
+
+.ataque-jogador {
+  background: red;
+  height: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.ataque-monstro {
+  background: blue;
+  height: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
