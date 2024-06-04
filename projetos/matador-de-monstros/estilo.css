@@ -19,7 +19,7 @@
 .barra {
   height: 10px;
   width: 100px;
-  background: green;
+  border: 1px solid black;
 }
 
 .jogador {

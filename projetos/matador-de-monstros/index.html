@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
     <link rel="stylesheet" href="estilo.css" />
   </head>
   <body>
-    <div class="painel">
+    <div class="painel" id="matador-monstros">
       <div class="card jogadores">
         <div class="jogador">
           <span>Jogador</span>
-          <div class="barra"></div>
+          <div class="barra">
+            <div :style="backgroundJogador"></div>
+          </div>
           <div>16%</div>
         </div>
         <div class="jogador">
           <span>Monstro</span>
-          <div class="barra"></div>
+          <div class="barra">
+            <div :style="backgroundMonstro"></div>
+          </div>
           <div>16%</div>
         </div>
       </div>
       <div class="card">Resultado</div>
       <div class="card botoes">
-        <button>Ataque</button>
+        <button @click="atacar">Ataque</button>
         <button>Ataque Especial</button>
         <button>Curar</button>
         <button>Desistir</button>
@@ -31,3 +36,5 @@
     </div>
   </body>
 </html>
+
+<script src="src.js"></script>
