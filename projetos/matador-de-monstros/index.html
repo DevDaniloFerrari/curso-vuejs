@@ -22,16 +22,23 @@
           <div>16%</div>
         </div>
       </div>
-      <div class="card">Resultado</div>
-      <div class="card botoes">
+      <div v-if="modo == 'resultado'" class="card">Resultado</div>
+      <div v-if="modo == 'jogando'" class="card botoes">
         <button @click="atacar">Ataque</button>
         <button>Ataque Especial</button>
         <button>Curar</button>
         <button>Desistir</button>
       </div>
-      <div class="card">
-        <div class="ataque-jogador">Monstro atingiu jogador com 12.</div>
-        <div class="ataque-monstro">Jogador atingiu monstro com 7.</div>
+      <div v-if="modo == 'inicio'" class="card botoes">
+        <button @click="iniciarJogo">Iniciar Jogo</button>
+      </div>
+      <div class="card" v-if="historicoAtaques.length > 0">
+        <div
+          v-for="ataque in historicoAtaques"
+          :class="obterClasse(ataque.atacante)"
+        >
+          {{ataque.mensagem}}
+        </div>
       </div>
     </div>
   </body>
