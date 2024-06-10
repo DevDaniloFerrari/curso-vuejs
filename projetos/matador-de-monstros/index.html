@@ -12,25 +12,38 @@
           <div class="barra">
             <div :style="backgroundJogador"></div>
           </div>
-          <div>16%</div>
+          <div>{{vidaJogador}}%</div>
         </div>
         <div class="jogador">
           <span>Monstro</span>
           <div class="barra">
             <div :style="backgroundMonstro"></div>
           </div>
-          <div>16%</div>
+          <div>{{vidaMonstro}}%</div>
         </div>
       </div>
-      <div v-if="modo == 'resultado'" class="card">Resultado</div>
+      <div
+        v-if="modo == 'resultado'"
+        class="card resultado"
+        :style="estiloResultado"
+      >
+        {{mensagemResultado}}
+      </div>
+      <div v-if="modo == 'resultado'" class="card resultado">
+        <button @click="iniciarJogo" class="btn iniciar-jogo">Iniciar Novo Jogo</button>
+      </div>
       <div v-if="modo == 'jogando'" class="card botoes">
-        <button @click="atacar">Ataque</button>
-        <button>Ataque Especial</button>
-        <button>Curar</button>
-        <button>Desistir</button>
+        <button @click="atacar" class="btn ataque">Ataque</button>
+        <button @click="atacarEspecial" class="btn ataque-especial">
+          Ataque Especial
+        </button>
+        <button @click="curar" class="btn curar">Curar</button>
+        <button @click="desistir" class="btn desistir">Desistir</button>
       </div>
       <div v-if="modo == 'inicio'" class="card botoes">
-        <button @click="iniciarJogo">Iniciar Jogo</button>
+        <button @click="iniciarJogo" class="btn iniciar-jogo">
+          Iniciar Jogo
+        </button>
       </div>
       <div class="card" v-if="historicoAtaques.length > 0">
         <div

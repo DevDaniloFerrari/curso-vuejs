@@ -17,9 +17,9 @@
 }
 
 .barra {
-  height: 10px;
-  width: 100px;
-  border: 1px solid black;
+  height: 15px;
+  width: 200px;
+  border: 1px solid #6c757d;
 }
 
 .jogador {
@@ -31,22 +31,59 @@
 .botoes {
   display: flex;
   justify-content: center;
+  gap: 5px;
 }
 
 .ataque-jogador {
-  background: red;
+  background: #dc3545;
   height: 20px;
   color: white;
   display: flex;
   justify-content: center;
   margin-bottom: 5px;
+  opacity: 0.85;
 }
 
 .ataque-monstro {
-  background: blue;
+  background: #0d6efd;
   height: 20px;
   color: white;
   display: flex;
   justify-content: center;
   margin-bottom: 5px;
+  opacity: 0.85;
+}
+
+.resultado {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  border: none;
+  border-radius: 3px;
+  height: 23px;
+}
+
+.ataque {
+  background: #dc3545;
+  color: white;
+}
+
+.ataque-especial {
+  background: #ffc107;
+}
+
+.curar {
+  background: #198754;
+  color: white;
+}
+
+.desistir {
+  background: #f8f9fa;
+}
+
+.iniciar-jogo {
+  background: #0d6efd;
+  color: white;
 }
