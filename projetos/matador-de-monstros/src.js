@@ -1,5 +1,5 @@
 new Vue({
-  el: "#matador-monstros",
+  el: "#ma tador-monstros",
   data: {
     vidaJogador: 100,
     vidaMonstro: 100,
