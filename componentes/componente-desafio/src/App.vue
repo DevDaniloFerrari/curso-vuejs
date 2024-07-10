@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import Menu from './Menu.vue'
-import TopBar from './TopBar.vue'
-import Conteudo from './Conteudo.vue'
-import Footer from './Footer.vue'
+import Menu from '@/components/template/Menu.vue'
+import TopBar from '@/components/template/TopBar.vue'
+import Conteudo from '@/Conteudo.vue'
+import Footer from '@/components/template/Footer.vue'
 
 export default {
   components: {

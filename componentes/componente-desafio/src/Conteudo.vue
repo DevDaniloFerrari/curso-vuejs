@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Carrossel from './Carrossel.vue'
+import Carrossel from './components/widgets/Carrossel.vue'
 export default {
     components: {
         "app-carrossel": Carrossel
