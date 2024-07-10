@@ -1,8 +1,8 @@
 <template>
-  <div class="contadores">
-    <h1>Contadores</h1>
-    <app-contador v-for="c in 5" :key="c"/>
-  </div>
+    <div class="contadores">
+        <h1>Contadores</h1>
+        <app-contador v-for="c in 5" :key="c" />
+    </div>
 </template>
 
 <script>
@@ -14,6 +14,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
